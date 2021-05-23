@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/out_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/city">
+
+    <RelativeLayout
+        android:id="@+id/frag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- 用于显示未来三天的天气情况-->
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="500dp"
+            android:layout_marginEnd="0dp"
+            app:srcCompat="@mipmap/isen" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/frag_tv_currenttemp"
+                android:layout_width="182dp"
+                android:layout_height="wrap_content"
+                android:text="3℃/5℃"
+                android:textColor="#FFFFFF"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/frag_tv_city"
+                style="@style/todaytext"
+                android:layout_below="@id/frag_tv_currenttemp"
+                android:layout_marginTop="20dp"
+                android:text="lille"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/frag_tv_condition"
+                style="@style/todaytext"
+                android:layout_below="@id/frag_tv_city"
+                android:layout_marginTop="28dp"
+                android:text="sunny"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/frag_tv_date"
+                style="@style/todaytext"
+                android:layout_below="@id/frag_tv_condition"
+                android:layout_marginTop="25dp"
+                android:text="2019-11-05"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/frag_tv_wind"
+                style="@style/todaytext"
+                android:layout_below="@id/frag_tv_date"
+                android:layout_marginTop="34dp"
+                android:text="east-north wind 3~4level"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/frag_tv_temprange"
+                style="@style/todaytext"
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/frag_tv_wind"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="41dp"
+                android:layout_marginLeft="-64dp"
+                android:layout_marginEnd="69dp"
+                android:layout_marginBottom="1dp"
+                android:layout_toEndOf="@+id/frag_tv_wind"
+                android:text="9~-1℃"
+                android:textColor="#FFFFFF" />
+
+            <LinearLayout
+                android:id="@+id/frag_center_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="250dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="131dp"
+                android:background="@drawable/frag_bg2"
+                android:orientation="vertical"
+                android:padding="10dp"></LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- 用于表示指数信息的线性布局-->
+    </RelativeLayout>
+</ScrollView>
